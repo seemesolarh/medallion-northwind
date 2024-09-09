@@ -1,0 +1,1 @@
+select * from suppliers_raw

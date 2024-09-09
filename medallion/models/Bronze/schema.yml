@@ -1,0 +1,365 @@
+models:
+  - name: brcategories
+    description: "Table containing category information."
+    columns:
+      - name: categoryId
+        description: "Unique identifier for the category."
+        tests:
+          - not_null
+          - unique
+      
+      - name: categoryName
+        description: "Name of the category."
+        tests:
+          - not_null
+
+      - name: description
+        description: "Description of the category."
+
+  - name: brcustomers
+    description: "Table containing customer information."
+    columns:
+      - name: customerId
+        description: "Unique identifier for the customer."
+        data_type: "integer"
+        tests:
+          - unique
+          - not_null
+
+      - name: companyName
+        description: "Name of the company."
+        data_type: "string"
+        tests:
+          - not_null
+
+      - name: contactName
+        description: "Name of the contact person."
+        data_type: "string"
+        tests:
+          - not_null
+
+      - name: contactTitle
+        description: "Title of the contact person."
+        data_type: "string"
+
+      - name: address
+        description: "Street address of the company."
+        data_type: "string"
+
+      - name: city
+        description: "City where the company is located."
+        data_type: "string"
+
+      - name: region
+        description: "Region where the company is located."
+        data_type: "string"
+
+      - name: postalcode
+        description: "Postal code for the company's location."
+        data_type: "string"
+
+      - name: country
+        description: "Country where the company is located."
+        data_type: "string"
+
+      - name: phone
+        description: "Phone number of the company."
+        data_type: "string"
+
+      - name: fax
+        description: "Fax number of the company."
+        data_type: "string"
+
+  - name: bremployees
+    description: "Table containing employee information."
+    columns:
+      - name: employeeId
+        description: "Unique identifier for an employee."
+        tests:
+          - not_null
+          - unique
+
+      - name: lastName
+        description: "Last name of the employee."
+        tests:
+          - not_null
+
+      - name: firstName
+        description: "First name of the employee."
+        tests:
+          - not_null
+
+      - name: title
+        description: "Job title of the employee."
+
+      - name: titleOfCourtesy
+        description: "Courtesy title of the employee (e.g., Mr., Mrs., Dr.)."
+
+      - name: birthDate
+        description: "Birth date of the employee."
+        tests:
+          - not_null
+
+      - name: hireDate
+        description: "Hire date of the employee."
+        tests:
+          - not_null
+
+      - name: address
+        description: "Home address of the employee."
+
+      - name: city
+        description: "City where the employee resides."
+
+      - name: region
+        description: "Region where the employee resides."
+
+      - name: postalCode
+        description: "Postal code of the employee's address."
+
+      - name: country
+        description: "Country where the employee resides."
+
+      - name: homePhone
+        description: "Home phone number of the employee."
+
+      - name: extension
+        description: "Phone extension of the employee at work."
+
+      - name: photo
+        description: "Photo of the employee."
+
+  - name: orders
+    description: "Table containing customer order information."
+    columns:
+      - name: orderId
+        description: "Unique identifier for each order."
+        tests:
+          - not_null
+          - unique
+
+      - name: customerId
+        description: "Unique identifier for each customer."
+        tests:
+          - not_null
+
+      - name: employeeId
+        description: "Unique identifier for the employee who processed the order."
+        tests:
+          - not_null
+
+      - name: orderDate
+        description: "Date when the order was placed."
+        tests:
+          - not_null
+
+      - name: requiredDate
+        description: "Date by which the order is required to be delivered."
+        tests:
+          - not_null
+
+      - name: shippedDate
+        description: "Date when the order was shipped."
+
+      - name: shipVia
+        description: "Shipping method used for the order."
+
+      - name: freight
+        description: "Freight charge for shipping the order."
+
+      - name: shipName
+        description: "Name of the recipient for the order."
+
+      - name: shipAddress
+        description: "Address where the order is to be shipped."
+
+      - name: shipCity
+        description: "City where the order is to be shipped."
+
+      - name: shipRegion
+        description: "Region where the order is to be shipped."
+
+      - name: shipPostalCode
+        description: "Postal code of the shipping address."
+
+      - name: shipCountry
+        description: "Country where the order is to be shipped."
+
+  - name: brordersdetail
+    description: "Table containing order details."
+    columns:
+      - name: orderID
+        description: "Unique identifier for each order."
+        tests:
+          - not_null
+          - unique
+
+      - name: productID
+        description: "Unique identifier for each product."
+        tests:
+          - not_null
+
+      - name: unitPrice
+        description: "Price per unit of the product."
+        tests:
+          - not_null
+          - accepted_range:
+              min: 0
+              max: 10000
+
+      - name: quantity
+        description: "Quantity of the product ordered."
+        tests:
+          - not_null
+          - accepted_range:
+              min: 1
+              max: 1000
+
+      - name: discount
+        description: "Discount applied to the product."
+        tests:
+          - not_null
+          - accepted_range:
+              min: 0
+              max: 1
+
+  - name: brproducts
+    description: "Table containing product details."
+    columns:
+      - name: supplierId
+        description: "ID of the supplier."
+        tests:
+          - not_null
+          - unique
+
+      - name: categoryId
+        description: "ID of the category."
+        tests:
+          - not_null
+
+      - name: quantityPerUnit
+        description: "Quantity of the product per unit."
+        tests:
+          - not_null
+
+      - name: unitPrice
+        description: "Price per unit of the product."
+        tests:
+          - not_null
+
+      - name: unitsInStock
+        description: "Number of units currently in stock."
+
+      - name: unitsOnOrder
+        description: "Number of units on order."
+
+      - name: reorderLevel
+        description: "Level at which the product should be reordered."
+
+      - name: discontinued
+        description: "Indicates whether the product is discontinued (1 if discontinued, 0 otherwise)."
+        tests:
+          - not_null
+
+  - name: brregion
+    description: "Table containing region information."
+    columns:
+      - name: regionId
+        description: "Unique identifier for the region."
+        tests:
+          - not_null
+          - unique
+
+      - name: regionDescription
+        description: "Description of the region."
+        tests:
+          - not_null
+
+  - name: brshippers
+    description: "Table containing shipper information."
+    columns:
+      - name: shipperId
+        description: "Unique identifier for each shipper."
+        tests:
+          - unique
+          - not_null
+
+      - name: companyName
+        description: "Name of the shipping company."
+        tests:
+          - not_null
+
+      - name: phone
+        description: "Contact phone number for the shipping company."
+        tests:
+          - not_null
+
+  - name: brsuppliers
+    description: "Table containing supplier information."
+    columns:
+      - name: supplierId
+        description: "Unique identifier for the supplier."
+        data_type: integer
+
+      - name: companyName
+        description: "Name of the company."
+        data_type: string
+
+      - name: contactName
+        description: "Name of the contact person."
+        data_type: string
+
+      - name: contactTitle
+        description: "Title of the contact person."
+        data_type: string
+
+      - name: address
+        description: "Address of the company."
+        data_type: string
+
+      - name: city
+        description: "City where the company is located."
+        data_type: string
+
+      - name: region
+        description: "Region where the company is located."
+        data_type: string
+
+      - name: postalCode
+        description: "Postal code of the company's address."
+        data_type: string
+
+      - name: country
+        description: "Country where the company is located."
+        data_type: string
+
+      - name: phone
+        description: "Phone number of the company."
+        data_type: string
+
+      - name: fax
+        description: "Fax number of the company."
+        data_type: string
+
+      - name: homePage
+        description: "Homepage URL of the company."
+        data_type: string
+
+  - name: brterritories
+    description: "Table storing information about territories in Brazil."
+    columns:
+      - name: territoryId
+        description: "Unique identifier for each territory."
+        type: integer
+        primary: true
+        not_null: true
+
+      - name: territoryDescription
+        description: "Description of the territory."
+        type: string
+
+      - name: regionId
+        description: "Identifier for the region to which the territory belongs."
+        type: integer
+
+           

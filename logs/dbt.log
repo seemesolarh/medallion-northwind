@@ -1,0 +1,58 @@
+[0m15:49:06.962695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB10017140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB100176B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB10016E40>]}
+
+
+============================== 15:49:06.978321 | b85c0897-4b4c-43b0-9aee-632e820646a4 ==============================
+[0m15:49:06.978321 [info ] [MainThread]: Running with dbt=1.7.11
+[0m15:49:06.978321 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt init medallion', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:49:06.978321 [debug] [MainThread]: Starter project path: C:\Users\user\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m15:49:07.103325 [info ] [MainThread]: 
+Your new dbt project "medallion" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:49:07.103325 [info ] [MainThread]: Setting up your profile.
+[0m11:37:44.187039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2824F7980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2824F7620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2824F7380>]}
+
+
+============================== 11:37:44.274385 | d05f2a21-822a-4df7-95cb-69f0c77e2eea ==============================
+[0m11:37:44.274385 [info ] [MainThread]: Running with dbt=1.7.11
+[0m11:37:44.301072 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init medallion-northwind', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:28.084011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002527710D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025276FCD3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000252770EB7D0>]}
+
+
+============================== 12:04:28.193384 | 335251e7-e94b-421a-89eb-28ce6a33ec53 ==============================
+[0m12:04:28.193384 [info ] [MainThread]: Running with dbt=1.7.11
+[0m12:04:28.193384 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:28.193384 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\user\Documents\medallion\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:04:28.210529 [debug] [MainThread]: Command `dbt run` failed at 12:04:28.209008 after 0.47 seconds
+[0m12:04:28.211528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025276D2F0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025276CBFD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025276FAB230>]}
+[0m12:04:28.212985 [debug] [MainThread]: Flushing usage events
+[0m13:05:11.836770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB912CC890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB912CCB00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB912CC800>]}
+
+
+============================== 13:05:12.095314 | ae0d92cf-5442-4a36-9ca5-409ff7bd9472 ==============================
+[0m13:05:12.095314 [info ] [MainThread]: Running with dbt=1.7.11
+[0m13:05:12.097683 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\user\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:05:12.099682 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\user\Documents\medallion\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:05:12.102678 [debug] [MainThread]: Command `dbt seed` failed at 13:05:12.101681 after 0.80 seconds
+[0m13:05:12.102678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB91073E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB906FE000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB912F3F50>]}
+[0m13:05:12.103679 [debug] [MainThread]: Flushing usage events
